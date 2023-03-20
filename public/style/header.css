@@ -6,7 +6,9 @@
 }
 
 /* nav .nav-menu */
-
+.nav-menu {
+    display: none;
+}
 
 /* Global class: "hidden" */
 .hidden {

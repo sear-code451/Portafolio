@@ -25,6 +25,8 @@ const line3__bars = document.querySelector(".line3__bars-menu");
 
 // Neccessary for button main
 const button_nav_menu = document.querySelector("#nav_menu");
+const main_body = document.querySelector(".main-body");
+const body = document.getElementById("body");
 
 function animateBars(){
     line1__bars.classList.toggle("activeline1__bars-menu");
@@ -34,6 +36,9 @@ function animateBars(){
     // nav-menu activation
     button_nav_menu.classList.toggle("boton-nav-menu");
     button_nav_menu.classList.toggle("nav-menu");
+    main_body.classList.toggle("active");
+    body.classList.toggle("activar");
+
 
 }
 

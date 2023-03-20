@@ -3,6 +3,7 @@
 
 .main-body {
     padding: 0 100px;
+    z-index: 3;
 }
 
 .section-main {

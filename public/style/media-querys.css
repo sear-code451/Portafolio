@@ -1,4 +1,11 @@
+
 @media (max-width:780px) {
+
+    /* body Main */
+    .activar {
+        overflow:hidden;
+    }
+
     /* hidden: "container-nav" */
     .container-header .menu-main {
         display: none;
@@ -14,7 +21,7 @@
         align-items: flex-end;
         width: 100%;
         position: static;
-        z-index: 1;
+        z-index: 2;
     }
 
     .bars__menu{
@@ -62,6 +69,7 @@
         background: var(--color-lightest-navy);
         box-shadow: -10px 0px 30px -15px;
         transition: 0.5s;
+        z-index: 1;
     }
 
     .nav-menu ul {
@@ -107,6 +115,15 @@
 
     .nav-menu .resume-2 a:hover {
         background-color: var(--color-Green-Tint);
+    }
+
+    /* BODY */
+    .main-body {
+        z-index: 3;
+    }
+
+    .active {
+        filter: blur(6px);
     }
 
 }
