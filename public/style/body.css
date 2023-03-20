@@ -1,0 +1,54 @@
+
+/* Section 1 about */
+
+.main-body {
+    padding: 0 100px;
+}
+
+.section-main {
+    min-height: 100vh;
+    height: 100%;
+}
+
+.space {
+    padding: 50px 0;
+}
+
+.section-main .greeting {
+    margin-bottom: 10px;
+}
+
+.section-main .greeting h1{
+    font-family: var(--sourceSecundary);
+    color: var(--colorSkyBlue);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.section-main .title-secundary {
+    margin-bottom: 10px;
+}
+
+.section-main .title-main h2 {
+    font-family: var(--sourceMain);
+    color: var(--colorTitle);
+    font-size: clamp(40px, 8vw, 80px);
+}
+
+.section-main .title-secundary h3 {
+    font-family: var(--sourceMain);
+    color: var(--colorText);
+    font-size: clamp(40px, 7vw, 80px);
+}
+
+.section-main .description-title p{
+    font-family: var(--sourceMain) ;
+    font-size: 17.5px;
+    color: var(--colorText);
+    font-weight: 300;
+    max-width: 540px;
+}
+
+
+
+

@@ -1,0 +1,125 @@
+
+/* Header */
+.header {
+    margin: 0;
+}
+
+/* nav .nav-menu */
+.nav-menu {
+    display: none;
+}
+
+/* Global class: "hidden" */
+.hidden {
+    display: none;
+}
+
+/* Container the header */
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+
+/*div container-nav */
+.container-nav {
+    display: flex;
+}
+
+/* First Div logo */
+.container-header .logo{
+    cursor: pointer;
+}
+
+.logo .container-logo {
+    font-family: var(--sourceLogo);
+    color: var(--colorSkyBlue);
+    border: 1px solid var(--colorSkyBlue);
+    font-size: 20px;
+    border-radius: 4px;
+    padding: 0.3rem 0.5rem;
+}
+
+.logo .container-logo:hover {
+    background-color: var(--color-Green-Tint);
+}
+
+/* Second group nav */
+
+.container-header .nav-links{
+    list-style: none;
+    font-family: var(--textSize);
+}
+
+.container-header .nav-links li {
+    display: inline-block;
+    counter-increment: item 1;
+}
+
+.container-header .nav-links li a{
+    padding: 0 15px;
+    color: var(--colorText);
+    font-family: var(--sourceSecundary) ;
+    font-size: var(--textSize);
+    text-decoration: none;
+    transition: 0.1s;
+}
+
+.container-header .nav-links li a:hover {
+    color: var(--colorSkyBlue);
+}
+
+.container-header .nav-links li a::before {
+    content: "0" counter(item) ".";
+    margin-right: 5px;
+    color: var(--colorSkyBlue);
+    font-size: var(--textSize);
+    text-align: right;
+    font-family: var(--sourceNumber);
+    font-weight: 500;
+}
+
+/* Third group div */
+
+.container-header .resume {
+    font-family: var(--sourceSecundary);
+}
+
+.link-resume {
+    color: var(--colorSkyBlue);
+    font-size: var(--textSize);
+    text-decoration: none;
+    border: 1px solid var(--colorSkyBlue);
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.container-header .resume a:hover {
+    background-color: var(--color-Green-Tint);
+    outline: none;
+}
+
+.header .boton-nav {
+    display: none;
+}
+
+.header .boton-nav-menu {
+    display: none;
+}
+
+.button_media_query {
+    display: none;
+}
+
+/* .sin-hover-menu {
+    display: none;
+} */
+
+
+
+
