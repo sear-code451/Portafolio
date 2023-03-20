@@ -2,12 +2,11 @@
 /* Header */
 .header {
     margin: 0;
+    display: grid;
 }
 
 /* nav .nav-menu */
-.nav-menu {
-    display: none;
-}
+
 
 /* Global class: "hidden" */
 .hidden {
@@ -109,7 +108,9 @@
 }
 
 .header .boton-nav-menu {
-    display: none;
+    content-visibility: hidden;
+    right: -100%;
+    transition: 0.5s;
 }
 
 .button_media_query {
