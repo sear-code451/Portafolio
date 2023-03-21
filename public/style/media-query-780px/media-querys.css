@@ -117,13 +117,5 @@
         background-color: var(--color-Green-Tint);
     }
 
-    /* BODY */
-    .main-body {
-        z-index: 3;
-    }
-
-    .active {
-        filter: blur(6px);
-    }
 
 }

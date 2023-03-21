@@ -1,0 +1,14 @@
+
+@media (max-width:780px) {
+        /* BODY */
+        .main-body {
+            z-index: 3;
+        }
+    
+        .active {
+            filter: blur(6px);
+        }
+
+        /* Section 2 : about_me */
+        
+}

@@ -50,6 +50,100 @@
     max-width: 540px;
 }
 
+/* Section 2 : about me */
 
+/* h2 : about me */
 
+.title_about {
+    display: flex;
+    -webkit-box-align: center;
+    position: relative;
+    margin: 10px 0px 40px;
+    width: 100%;
+    white-space: nowrap;
+    font-family: var(--sourceMain);
+    font-size: var(--titleSize);
+    color: var(--colorTitle) ;
+}
 
+.title_about::before {
+    content: "01.";
+    position: relative;
+    bottom: 4px;
+    margin-right: 10px;
+    font-family: var(--sourceSecundary);
+    font-weight: 400;
+    color: var(--colorSkyBlue);
+}
+
+.title_about::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: 15px;
+    height: 1px;
+    width: 300px;
+    margin-left: 20px;
+    background-color:#233554;
+}
+
+/* section 2 : div = about_paragraph */
+
+.about_paragraph {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 50px;
+}
+
+.about_paragraph .about_paragraph_about_me {
+    font-family: var(--sourceInter);
+    color: var(--colorText);
+}
+
+.about_paragraph .about_paragraph_about_me p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* section 2 : profile img */
+
+.profile img {
+    border-radius: 4px;
+    box-shadow: -10px 0px 30px -15px;
+}
+
+.profile img::before {
+    content: "";
+    width: 300;
+    height: 300;
+    position: absolute;
+    border-color: var(--colorSkyBlue);
+    transition: 0.3s;
+
+}
+
+/* Section 2 : ul skill_list */
+
+.skill_list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    gap: 0px 10px;
+    padding: 0px;
+    margin-top: 30px;
+    overflow: hidden;
+    list-style: none;
+}
+
+.skill_list li {
+    font-family: var(--sourceNumber);
+    font-size: 12px;
+    color: var(--colorText);
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.skill_list li::before {
+    content: "▹ ";
+    color: var(--colorSkyBlue);
+    font-size: var(--textSize);
+}
