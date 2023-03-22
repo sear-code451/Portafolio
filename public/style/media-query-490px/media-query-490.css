@@ -1,0 +1,20 @@
+@media (max-width:490px) {
+    /* Section all */
+    .section-main {
+        min-height: 80vh;
+    }
+
+    /* Section 2: about me */
+    .skill_list {
+        display: block;
+    }
+
+    .skill_list li {
+        padding-left: 0;
+    }
+
+    .profile img {
+        width: 250px;
+        height: 250px;
+    }
+}

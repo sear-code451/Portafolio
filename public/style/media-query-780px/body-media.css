@@ -3,6 +3,7 @@
         /* BODY */
         .main-body {
             z-index: 3;
+            padding: 0px 50px;
         }
     
         .active {
@@ -10,5 +11,17 @@
         }
 
         /* Section 2 : about_me */
-        
+        .about_paragraph {
+            display: block;
+        }
+
+        .about_paragraph .content_about_me {
+            margin-bottom: 30px;
+        }
+
+        .about_paragraph .profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 }

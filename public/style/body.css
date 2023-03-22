@@ -67,7 +67,8 @@
 }
 
 .title_about::before {
-    content: "01.";
+    counter-increment:  section 1;
+    content: "0" counter(section) ".";
     position: relative;
     bottom: 4px;
     margin-right: 10px;
@@ -146,4 +147,90 @@
     content: "▹ ";
     color: var(--colorSkyBlue);
     font-size: var(--textSize);
+}
+
+/* Section 3: Knowledge */
+
+#Knowledge .title_about::before {
+    counter-increment: section 2;
+}
+
+.container-knowledge {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-areas:
+    "izquierda izquierda derecha derecha derecha derecha derecha derecha derecha derecha derecha derecha";
+}
+
+.container-knowledge .menu-knowledge {
+    display: grid;
+    grid-area: izquierda;
+}
+
+/* button menu-knowledge */
+
+.menu-knowledge button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: var(--sourceSecundary);
+    font-size: 13px;
+    font-weight: 400;
+    background-color:transparent;
+    padding-left: 10px;
+    color: var(--colorText);
+    border: none;
+    cursor: pointer;
+    border-left: var(--color-navy) solid 2px;
+}
+
+.menu-knowledge button:hover {
+    background-color: var(--color-lightest-navy);
+    color: var(--colorSkyBlue);
+}
+
+
+
+.menu-knowledge #javascript-content {
+    border-left: var(--colorSkyBlue) solid 2px;
+}
+
+/* content-knowledge */
+
+.container-knowledge .content-knowledge {
+    grid-area: derecha;
+    padding-left: 15px;
+}
+
+.btn-title-knowledge{
+    font-family: var(--sourceMain);
+    font-size: 18px;
+    color: var(--colorSkyBlue);
+    margin: 5px 0 7px 0 ;
+}
+
+.btn-data-knowledge {
+    font-family: var(--sourceSecundary);
+    font-size: 13px;
+    color: var(--colorText);
+    margin-bottom: 10px;
+}
+
+/* div content-paragraph knowledge ul li */
+
+.content-paragraph-knowledge ul li {
+    position: relative;
+    font-family: var(--sourceText);
+    font-size: var(--textSize);
+    padding-left: 22px;
+    margin-bottom: 10px;
+    color: var(--colorText);
+    list-style: none;
+}
+
+.content-paragraph-knowledge ul li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--colorSkyBlue);
 }

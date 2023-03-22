@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./style/media-query-780px/media-querys.css">
     <link rel="stylesheet" href="./style/body.css">
     <link rel="stylesheet" href="./style/media-query-780px/body-media.css">
+    <link rel="stylesheet" href="./style/media-query-490px/media-query-490.css">
     <script defer src="./js/script.js"></script>
     <script defer src="./js/example.js"></script>
     <title>Portafolio Pablo Rueda</title>
@@ -129,8 +130,65 @@
             </div>
         </section>
 
-        <section class="section-main">
+        <section id="Knowledge" class="section-main">
+            <h2 class="title_about">Knowledge</h2>
+            
+            <div class="container-knowledge">
+                <div class="menu-knowledge">
+                    <button id="javascript-content" tabindex="1" onclick="toggleButtonJs()">
+                        Javascript
+                    </button>
+    
+                    <button id="express-content" tabindex="0" onclick="toggleButtonExpress()">
+                        Express
+                    </button>
+    
+                    <button id="node-content" tabindex="0" onclick="toggleButtonNode()">
+                        Node.js
+                    </button>
+    
+                    <button id="typescript-content" tabindex="0" onclick="toggleButtonTs()">
+                        Typescript
+                    </button>
+    
+                    <button id="mongoose-content" tabindex="0" onclick="toggleButtonMongoose()">
+                        Moongose
+                    </button>
+    
+                    <button id="mongo-content" tabindex="0" onclick="toggleButtonMongo()">
+                        Mongo DB
+                    </button>
+                </div>
 
+                <div class="content-knowledge">
+                    <div class="knowledge-javascript">
+                        <h3 class="btn-title-knowledge">
+                            Conocimiento Avanzado
+                        </h3>
+
+                        <p class="btn-data-knowledge">January 2023 - Present</p>
+
+                        <div class="content-paragraph-knowledge">
+                            <ul>
+                                
+                                <li>
+                                    Entiendo en su gran a javascript, que es un lenguaje orientado a objeto, y que se lo puede usar de forma asíncrono.
+                                </li>
+
+                                <li>
+                                    Se comandos más o menos de nivel intermedio.También se usar métodos para arrays y objetos.
+                                </li>
+
+                                <li>
+                                    Usar el lenguaje con DOM, de una forma básica, también usar promesas, pero entiendo de como usar o hacer callback, y respetando todo con las buenas prácticas o en realidad intentando hacerlo con buenas prácticas.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            
+            
         </section>
 
     </main>
