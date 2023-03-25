@@ -150,6 +150,9 @@
 }
 
 /* Section 3: Knowledge */
+#Knowledge {
+    min-height: 75vh;
+}
 
 #Knowledge .title_about::before {
     counter-increment: section 2;
@@ -182,6 +185,7 @@
     border: none;
     cursor: pointer;
     border-left: var(--color-navy) solid 2px;
+    transition: 0.4s;
 }
 
 .menu-knowledge button:hover {
@@ -191,8 +195,11 @@
 
 
 
-.menu-knowledge #javascript-content {
+.menu-knowledge .activar {
     border-left: var(--colorSkyBlue) solid 2px;
+    background-color: var(--color-lightest-navy);
+    color: var(--colorSkyBlue);
+    transition: 0.4s;
 }
 
 /* content-knowledge */
@@ -200,6 +207,10 @@
 .container-knowledge .content-knowledge {
     grid-area: derecha;
     padding-left: 15px;
+}
+
+.content-knowledge .not-visible {
+    display: none;
 }
 
 .btn-title-knowledge{
@@ -233,4 +244,46 @@
     position: absolute;
     left: 0;
     color: var(--colorSkyBlue);
+}
+
+.underline-color {
+    color: var(--colorSkyBlue);
+    font-family: var(--sourceText);
+    font-size: var(--textSize);
+}
+
+
+/* Section 3 : ¿Qué sigue? */
+
+#section-contact {
+    min-height: 65vh;
+    margin-top: 50px;
+}
+
+.sub-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--sourceMain);
+    color: var(--colorTitle);
+    font-size: 40px;
+}
+
+#section-contact .title_about::before {
+    counter-increment: section 3;
+}
+
+.content-contact ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-contact ul li {
+    font-family: var(--sourceText);
+    font-size: 15px;
+    list-style: none;
+    color: var(--colorText);
+    padding: 10px;
 }

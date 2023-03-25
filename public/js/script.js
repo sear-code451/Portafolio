@@ -51,6 +51,12 @@ const btnMongoose = document.getElementById("mongoose-content");
 const btnMongoDB = document.getElementById("mongo-content");
 
 
+const class_hidden_content = document.querySelectorAll(".item-knowledge");
+console.log(class_hidden_content[0]);
+// class_not_visible.forEach( (current) => {
+//     current.classList.toggle("not-visible");
+// } );
+
 const btnList = [
     btnJavascript,
     btnExpress,
@@ -60,77 +66,85 @@ const btnList = [
     btnMongoDB 
 ];
 
-const listFilter = ( value, listArray ) => {
-    listArray.forEach( ( current ) => {
-        if( current === value ) return
-        if( current.tabIndex === 1) current.tabIndex = 0;
-        current.classList.toggle("visible");
+
+const toggle_btn_current = ( btn_current, list_button_knowledge ) => {
+    list_button_knowledge.forEach( ( current ) => {
+        if( current === btn_current ) {
+            btn_current.tabIndex = 1;
+            return
+        } else {
+            current.tabIndex = 0;
+        }
     } );
 };
 
-
+const toggle_content_current = () => {
+    
+    btnList.forEach( (current, index) => {
+        if( current.tabIndex === 1 ) {
+            class_hidden_content[index].classList.toggle("not-visible");
+            current.classList.toggle("activar");
+            return
+        } else {
+            if( !class_hidden_content[index].classList.contains("not-visible") ){
+                class_hidden_content[index].classList.toggle("not-visible");
+            }
+            if( current.classList.contains("activar") ) {
+                current.classList.toggle("activar");
+            }
+        }
+    } )
+};
 
 const toggleButtonJs = () => {
-    if( btnJavascript.tabIndex === 1 ) return console.log("javascript");
+    if( btnJavascript.tabIndex === 1 ) return;
     if( btnJavascript.tabIndex === 0 ) {
-        // visible
-        btnJavascript.tabIndex = 1;
-        value = btnJavascript;
-        // Rest
-        listFilter( value, btnList );
+        const btn_current = btnJavascript;
+        toggle_btn_current( btn_current, btnList );
+        toggle_content_current();
     }
 };
+
 const toggleButtonExpress = () => {
-    if( btnExpress.tabIndex === 1 ) return console.log("Express");
+    if( btnExpress.tabIndex === 1 ) return;
     if( btnExpress.tabIndex === 0 ) {
-        // visible
-        btnExpress.tabIndex = 1;
-        const value = btnExpress;
-        // Rest
-        listFilter( value, btnList );
+        const btn_current = btnExpress;
+        toggle_btn_current( btn_current, btnList );
+        toggle_content_current();
     }
 };
 const toggleButtonNode = () => {
-    if( btnNode.tabIndex === 1 ) return console.log("Node");
+    if( btnNode.tabIndex === 1 ) return;
     if( btnNode.tabIndex === 0 ) {
-        // visible
-        btnNode.tabIndex = 1;
-        const value = btnNode;
-        // Rest
-        listFilter( value, btnList );
+        const btn_current = btnNode;
+        toggle_btn_current( btn_current, btnList );
+        toggle_content_current();
     }
 };
 const toggleButtonTs = () => {
-    if( btnTypescript.tabIndex === 1 ) return console.log("Typescript");
+    if( btnTypescript.tabIndex === 1 ) return;
     if( btnTypescript.tabIndex === 0 ) {
-        // visible
-        btnTypescript.tabIndex = 1;
-        const value = btnTypescript;
-        // Rest
-        listFilter( value, btnList );
+        const btn_current = btnTypescript;
+        toggle_btn_current( btn_current, btnList );
+        toggle_content_current();
     }
 };
 const toggleButtonMongoose = () => {
-    if( btnMongoose.tabIndex === 1 ) return console.log("Mongoose");
+    if( btnMongoose.tabIndex === 1 ) return;
     if( btnMongoose.tabIndex === 0 ) {
-        // visible
-        btnMongoose.tabIndex = 1;
-        const value = btnMongoose;
-        // Rest
-        listFilter( value, btnList );
+        const btn_current = btnMongoose;
+        toggle_btn_current( btn_current, btnList );
+        toggle_content_current();
     }
 };
 const toggleButtonMongo = () => {
-    if( btnMongoDB.tabIndex === 1 ) return console.log("Mongo DB");
+    if( btnMongoDB.tabIndex === 1 ) return;
     if( btnMongoDB.tabIndex === 0 ) {
-        // visible
-        btnMongoDB.tabIndex = 1;
-        const value = btnMongoDB;
-        // Rest
-        listFilter( value, btnList );
+        const btn_current = btnMongoDB;
+        toggle_btn_current( btn_current, btnList );
+        toggle_content_current();
     }
 };
-
 
 
 

@@ -5,6 +5,10 @@
             z-index: 3;
             padding: 0px 50px;
         }
+
+        #Knowledge {
+            padding: 100px 0 0 0;
+        }
     
         .active {
             filter: blur(6px);
@@ -23,5 +27,27 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        .container-knowledge {
+            display: block;
+        }
+    
+        .container-knowledge .menu-knowledge {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 16.5px;
+        }
+
+        .menu-knowledge button {
+            border-top: var(--color-navy) solid 2px ;
+            padding: 10px 8px;
+            padding-left: none;
+            border-left: none;
+        }
+
+        .menu-knowledge .activar{
+            border-top: var(--colorSkyBlue) solid 2px ;
+            border-left: none;
         }
 }

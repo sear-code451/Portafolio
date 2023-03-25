@@ -10,9 +10,13 @@
     <link rel="stylesheet" href="./style/body.css">
     <link rel="stylesheet" href="./style/media-query-780px/body-media.css">
     <link rel="stylesheet" href="./style/media-query-490px/media-query-490.css">
+    <link rel="stylesheet" href="./style/footer.css">
     <script defer src="./js/script.js"></script>
     <script defer src="./js/example.js"></script>
     <title>Portafolio Pablo Rueda</title>
+    <script src="https://kit.fontawesome.com/9674d29b4d.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
 <body id="body" class="">
@@ -135,7 +139,7 @@
             
             <div class="container-knowledge">
                 <div class="menu-knowledge">
-                    <button id="javascript-content" tabindex="1" onclick="toggleButtonJs()">
+                    <button id="javascript-content" class="activar" tabindex="1" onclick="toggleButtonJs()">
                         Javascript
                     </button>
     
@@ -161,7 +165,8 @@
                 </div>
 
                 <div class="content-knowledge">
-                    <div class="knowledge-javascript">
+                    
+                    <div class="item-knowledge" tabindex="1">
                         <h3 class="btn-title-knowledge">
                             Conocimiento Avanzado
                         </h3>
@@ -185,12 +190,187 @@
                             </ul>
                         </div>
                     </div>
+                    
+                    <div class="item-knowledge not-visible" tabindex="0">
+                        <h3 class="btn-title-knowledge">
+                            Conocimiento Intermedio y Avanzado express
+                        </h3>
+
+                        <p class="btn-data-knowledge">March 2023 - Present</p>
+
+                        <div class="content-paragraph-knowledge">
+                            <ul>
+                                
+                                <li>
+                                    Entiendo en como usar Express calculo yo que de una forma basica a intermedio, entiendo que con express se crea el servidor y podemos hacer manipulación con el servidor, y bueno se usarlo con otros paquetes de tercero como: 
+                                    <span class="underline-color">express-validator   Moongose    Mongo DB.</span>
+                                </li>
+
+                                <li>
+                                    También se usarlo con API, se como usar los protolos de Rest Server. entiendo que esto se lo usa más por buenas prácticas por que no es obligatorio que se haga Rest Server con los servidores... Pero esto se hace más que todo para que el equipo u otras personas entienda a como se están usando los datos.
+                                </li>
+
+                                <li>
+                                    Otra parte sería que entiendo de como usa o se debe de usar los estados de código (Status Code), entiendo que hay una variedad para todo tipo de respuesta (Status Code) y que debemos de saber cual respuesta es la adecuada para dicha situación.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="item-knowledge not-visible" tabindex="0">
+                        <h3 class="btn-title-knowledge">
+                            Conocimiento Avanzado Node
+                        </h3>
+
+                        <p class="btn-data-knowledge">March 2023 - Present</p>
+
+                        <div class="content-paragraph-knowledge">
+                            <ul>
+                                
+                                <li>
+                                    Se usar Node con javascript, y bueno todo lo mencionado con la lista, se podría decir que entiendo de una forma intermedia, se que es un tipo de entorno de trabajo de conectar javascript con el back y hacer uso con <span class="underline-color">Npm o yargs</span>.
+                                </li>
+
+                                <li>
+                                    He podido crear proyectos como mi portafolio y otro de no forma visual pero lo tengo en archivos de como he usado y vinculado de usar Node.js con Mongo DB, NPM o yargs, un ejemplo de un npm que me pareció interesante de como usar handlebars, que se lo usa para servidores se podría decir sencillos o pequeños, en otras palabras Node.js es un entorno de trabajo o que nos da una serie de biblioteca de terceros, de aprovechar esas cosas y saber usar e implementarlos en nuestros proyectos.
+                                </li>
+
+                                <li>
+                                    Como tiene una gran variedad de paquete Node.js de npm y otras cosas es sólo buscar lo que se necesita e implementarlo en nuestro proyecto con la herramienta adecuada que nos da o podamos encontrar con "Node.js".
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="item-knowledge not-visible" tabindex="0">
+                        <h3 class="btn-title-knowledge">
+                            Conocimiento Intermedio Ts
+                        </h3>
+
+                        <p class="btn-data-knowledge">February 2023 - Present</p>
+
+                        <div class="content-paragraph-knowledge">
+                            <ul>
+                                
+                                <li>
+                                    Logro entender como se puede transpilar datos de Typescript a javascript, también noción de como usarlo con Test de pruebas como Cypress, Jest.
+                                </li>
+
+                                <li>
+                                    Quiero comentar que también entiendo aunque sea lo básico de los Test Unitarios, Integración y End to End.
+                                    Tengo algunos proyectos en mi cuenta de gitHub sobre Test Unitarios y End to End. 
+                                </li>
+
+                                <li>
+                                    Entendimiento de como usar Implements, abstract, class, e interfaces, todo eso claramente con la fuerte tipado (Tipo de datos) que debe tener tales cosas para así evitar errores más adelante.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="item-knowledge not-visible" tabindex="0">
+                        <h3 class="btn-title-knowledge">
+                            Conocimiento Intermedio Mongoose
+                        </h3>
+
+                        <p class="btn-data-knowledge">March 2023 - Present</p>
+
+                        <div class="content-paragraph-knowledge">
+                            <ul>
+                                
+                                <li>
+                                    Puedo combinar Mongoose con Mongo DB y express. Bueno también todo eso con express-validator, lograr entender como funciona y mezclarlos todo esto para que funcione correctamente.
+                                </li>
+
+                                <li>
+                                    Otro dato sería tambien la combinación aparte de usar lo anterior, también puedo usarlo con apis Rest, e imaginarme como usar también los estados de código (Status Code), que tipo de respuesta (response) enviar.
+                                </li>
+
+                                <li>
+                                    Quiero dar a entender que a la hora de usar o diseñar mis API, lo hago con <span class="underline-color">Postman:</span> 
+                                    tengo un noción o conocimiento claro de como usar las Apis con postman que rest Server probar o usar, bueno lo uso bastante, que he logrado entender lo básico.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="item-knowledge not-visible" tabindex="0">
+                        <h3 class="btn-title-knowledge">
+                            Conocimiento Intermedio
+                        </h3>
+
+                        <p class="btn-data-knowledge">March 2023 - Present</p>
+
+                        <div class="content-paragraph-knowledge">
+                            <ul>
+                                
+                                <li>
+                                    Realmente tengo que asincerarme diciendo que sólo tengo una noción llendo a entender o completar de entender lo básico. Solo se como crear una base de datos, como conectarlo con Mongoose mi base dato, y express y usar middlewares y eso. Pero en si no tengo aún los conocimientos básicos de Mongo DB, sólo se como implementarlos con las demás herramientas
+                                </li>
+
+                                <li>
+                                    Bueno muchas gracias por leer hasta el momento, trato de ser sincero con lo que sé y poder ganar una oportunidad de poder trabajar en algo que me apasiona.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>            
             
             
         </section>
 
+        <section id="section-contact" class="section-main">
+            <h3 class="title_about">
+                ¿Qué sigue?
+            </h3>
+
+            <h2 class="sub-title">
+                Contáctanos
+            </h2>
+
+            <div class="content-contact">
+                <ul>
+                    <li>
+                        Ahora estoy en busca de oportunidades, tratando de lograr trabajar en algo que me apasiona y tratando de seguir siendo constante en seguir aprendiendo, y bueno si logro causar interés y  si necesita contactarme pueden hacerlo con los link de abajo de los iconos en lo que podrán contactarme.
+                    </li>
+
+                    <li>
+                        !Bueno muchas gracias por llegar hasta este punto, hasta pronto!.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
     </main>
+
+    <footer>
+        <div class="social-network">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-github size"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin-in size"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-google size"></i>
+                    </a>
+                </li>
+            </ul>
+            
+        </div>
+
+        <div class="final-content">
+            <p>
+                Para mantenerse en contacto presione cualquiera de los iconos.
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
