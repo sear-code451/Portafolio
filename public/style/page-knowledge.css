@@ -1,0 +1,140 @@
+
+/* Page contact */
+
+.contact_form{  
+    width: 500px; 
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px;  
+    padding-top: 30px;
+    padding-bottom: 20px;  
+    background-color: var(--color-lightest-navy); 
+    padding-left: 30px; 
+    border: 3px solid var(--colorSkyBlue);
+  }
+  
+  
+  .paragraph-knowledge input{
+    background-color: #19376D; 
+    color: var(--colorText);
+    font-size: 14px;
+    width: 408px; 
+    height: 40px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: var(--colorSkyBlue); 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px;
+  }
+  
+  
+  textarea{
+    background-color: #19376D;
+    color: var(--colorText);
+    font-size: 14px;
+    width: 405px; 
+    height: 150px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: var(--colorSkyBlue); 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+    padding-top: 15px;
+    transition: 0.5s;
+  }
+  
+  
+  label{
+    display: block; 
+    float: center;  
+  }
+  
+  
+  .formulario button{
+    height: 45px; 
+    padding-left: 5px;
+    padding-right: 5px;   
+    margin-bottom: 20px; 
+    margin-top: 10px;   
+    text-transform: uppercase;
+    background-color: #19376D;
+    border-color: var(--colorSkyBlue); 
+    border-style: solid; 
+    border-radius: 10px;  
+    width: 420px;   
+    cursor: pointer;
+  }
+  
+  
+  .formulario button p{
+    color: #fff;
+  }
+  
+  .content-label {
+    font-family: var(--sourceText);
+    font-size: 18px;
+  }
+  
+  .obligatorio {
+    color: var(--colorSkyBlue);
+  }
+  
+  
+  .aviso{
+    font-family: var(--sourceSecundary);
+    font-size: 13px;  
+    color: var(--colorText);
+  }
+  
+  
+  .contact_form h1{
+    font-size: 30px;  
+    text-align: letf; 
+    padding-bottom: 20px; 
+    color: var(--colorTitle);
+    font-family: var(--sourceText);
+  }
+  
+  
+  .contact_form h3{
+    font-size: 12px; 
+    padding-bottom: 30px;
+    color: var(--colorText);   
+    font-family: var(--sourceSecundary);
+  }
+  
+  
+  .paragraph-knowledge {
+    font-size: 14px; 
+    color: var(--colorTitle); 
+  }
+  
+  
+  ::-webkit-input-placeholder {
+   color: #a8a8a8;
+  }
+  
+  
+  ::-webkit-textarea-placeholder {
+   color: #a8a8a8;
+  }
+  
+  
+  .formulario input:focus{
+    outline:0;
+    border: 1px solid #16FF00 ;
+    transition: 0.5s;
+  }
+  /* #362FD9 */
+  
+  
+  .formulario textarea:focus{
+    outline:0;
+    border: 1.5px solid #16FF00;
+    transition: 0.5s;
+  }
+  
