@@ -1,19 +1,4 @@
 
-// Example of how to use javascript
-// const cabezera = document.querySelector( ".header" );
-// const title1 = "Pablo Rueda";
-// console.log( cabezera );
-
-// animation nav-menu
-
-// document.querySelector(".nav-menu").addEventListener("click",animateNavMenu);
-
-// const navMenu = document.querySelector(".none");
-
-// const animateNavMenu = () => {
-//     navMenu.classList.toggle("nav-menu");
-// };
-
 
 // nav-menu button
 document.querySelector(".bars__menu").addEventListener("click", animateBars);
@@ -53,9 +38,6 @@ const btnMongoDB = document.getElementById("mongo-content");
 
 const class_hidden_content = document.querySelectorAll(".item-knowledge");
 console.log(class_hidden_content[0]);
-// class_not_visible.forEach( (current) => {
-//     current.classList.toggle("not-visible");
-// } );
 
 const btnList = [
     btnJavascript,

@@ -5,6 +5,7 @@ const {
     homeGet,
     aboutGet,
     contactGet,
+    contactPost
 } = require('../controllers/controllers');
 
 // Links
@@ -19,6 +20,8 @@ router.get('/about', aboutGet );
 
 // Rest Server /contat-page
 router.get( '/contact', contactGet );
+router.post( '/contact', contactPost);
+
 
 
 // Module Export

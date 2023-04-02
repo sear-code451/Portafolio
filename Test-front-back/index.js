@@ -27,8 +27,8 @@ app.get( '/transactions', (req, res) => {
 } );
 
 
-app.post( '/transactions', (req, res) => {
-    let transaction = req.body;
+app.post( '/transactions', async(req, res) => {
+    let transaction = await req.body;
     transactionArr.push(transaction);
     console.log(transactionArr);
     res.send( JSON.stringify("Save Post") );

@@ -1,5 +1,7 @@
 
 const forElement = document.getElementById('saveTransaction');
+const path_post = 'http://localhost:3000/transactions';
+
 
 forElement.addEventListener( 'submit', (event) => {
     event.preventDefault();
@@ -16,8 +18,15 @@ forElement.addEventListener( 'submit', (event) => {
     console.log(transactionJson);
 
     // Mandar los datos al back-end y guardarlos ahí
-    
+
+    fetch( path_post, {
+        method: 'Post',
+        body: transactionJson
+    } ); 
     
 } )
+
+fetch( path_post ).then( x => x.json() ).then( console.log() );
+
 
 
