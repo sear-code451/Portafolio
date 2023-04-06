@@ -23,7 +23,9 @@ const aboutGet = async( req = request , res = response ) => {
 
 // CONTACT Page
 const contactGet = async( req, res ) => {
-    res.render( 'html-links/contact' );
+    res.render( 'html-links/contact', {
+        correct: 'todo correcto'
+    } );
 };
 
 const contactPost = async(req = request,res = response) => {
@@ -52,9 +54,7 @@ const contactPost = async(req = request,res = response) => {
 
     await result.save();
 
-    res.status(200).json( {
-        lista
-    } )
+    res.status(200);
 };
 
 module.exports = {

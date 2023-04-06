@@ -1,5 +1,17 @@
 
-// Probando la existencia de la página sin llamar de vuelta a la página
+// Verificando el mensaje error con todos los errores del check
+
+const check_Error_Message = () => {
+    const errors_Message = document.getElementById('error-message');
+    if( !errors_Message.classList.contains('exist') ) {
+        errors_Message.classList.add('exist');
+    }
+};
+
+module.exports = {
+    check_Error_Message
+};
+
 
 
 

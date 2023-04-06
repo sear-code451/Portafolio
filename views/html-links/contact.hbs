@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="../style/footer.css">
     <link rel="stylesheet" href="../style/page-knowledge.css">
     <!-- script -->
-        <script defer src="../js/script.js"></script>
+    <script defer src="../js/script.js"></script>
     <script defer src="../js/example.js"></script>
+    <script defer src="../js/page-contact.js"></script>
     {{!-- <script defer src="../js/page-contact.js"></script> --}}
     <script src="https://kit.fontawesome.com/9674d29b4d.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"></script>
@@ -119,12 +120,8 @@
                         <textarea name="message" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
                     </p>
 
-                    <div class="not-exist" id="message-error" >
-                        <i class="fa-solid fa-triangle-exclamation size"></i>
-                        <p>
-                            <span class="title-text">ERROR:</span>This is an error message.
-                        </p>
-                    </div>
+                    {{> contact-error-message }}
+
                   
                     <button  name="enviar_formulario" id="enviar"><p>Enviar</p></button>
       
