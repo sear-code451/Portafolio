@@ -137,4 +137,37 @@
     border: 1.5px solid #16FF00;
     transition: 0.5s;
   }
+
+  /* Warning message, how to do error */
+  .not-exist {
+    display:  none;
+  }
+
+  /* Error Message */
+  .exist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--sourceSecundary);
+    background-color: #DF2E38;
+    border: 2px solid #DF2E38;
+    border-radius: 5px;
+    width: 408px;
+    height: 40px;
+
+  }
+
+  .exist p {
+     font-size: 16px;
+     margin: 0 0 0 15px;
+  }
+
+  .exist .size {
+    font-size: 21px;
+  }
+
+  .title-text {
+    font-weight: 700;
+    font-size: 16px;
+  }
   

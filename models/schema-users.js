@@ -6,24 +6,32 @@ const { Schema, model } = require('mongoose');
 const schemaUser =  Schema( {
     name: {
         type: String,
-        // required: [ true, 'It is need name' ]
+        required: [ true, 'The name is required' ]
     },
 
-    correo: {
+    email: {
         type: String,
-        // required: [ true, 'It is need email' ],
-        // unique: true
+        required: [ true, 'The email is required' ],
+        unique: true
     },
 
     password: {
         type: String,
-        // required: [ true, 'It is need password' ]
+        required: [ true, 'The password is required' ]
     },
 
     rol: {
         type: String,
-        // required: [ true, 'It is need rol' ],
-        // enum: [ 'ADMIN_ROLE', 'USER_ROLE' ]
+        required: [ true, 'The Rol is required' ]
+    },
+
+    telephone: {
+        type: Number,
+        required: [ true, 'The telephone is required' ]
+    },
+
+    message: {
+        type: String || Number,
     },
 
     status: {

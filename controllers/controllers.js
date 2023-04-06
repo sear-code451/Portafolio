@@ -13,23 +13,7 @@ let datas_hbs = {
 
 // HOME Page
 const homeGet = async( req = request , res = response ) => {
-    // const test = req.body;
-    // const user = new Page_User( test );
-
-    // await user.save();
-    // console.log(user);
-    // console.log( test );
-
-    // const { name, correo } = test;
-
-    // datas_hbs = {
-    //     title: name,
-    //     nombre: correo
-    // };
-
     res.render( 'html-links/home', datas_hbs );
-    
-
 };
 
 // ABOUT Page
@@ -42,22 +26,35 @@ const contactGet = async( req, res ) => {
     res.render( 'html-links/contact' );
 };
 
-
-const contactPost = async(req,res) => {
+const contactPost = async(req = request,res = response) => {
     
-    // let transaction = req.body;
-    // console.log(transaction);
-    // transactionArr.push(transaction);
-    // console.log(transactionArr);
-    // res.send( transaction );
-    const cuerpo = req.body;
-    const result = new Page_User(cuerpo);
+    console.log( req.body );
+
+    const { 
+        name,
+        email,
+        password,
+        telephone,
+        rol,
+        message
+    } = req.body;
+    
+    const lista = {
+        name,
+        email,
+        password,
+        telephone,
+        rol,
+        message
+    }
+
+    const result = new Page_User( lista );
 
     await result.save();
 
-    console.log(cuerpo);
-
-
+    res.status(200).json( {
+        lista
+    } )
 };
 
 module.exports = {
