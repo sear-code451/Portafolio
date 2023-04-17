@@ -1,13 +1,10 @@
 
 // Requires
 const { response, request } = require('express');
+const bcrypt = require('bcryptjs');
 const Page_User = require('../models/schema-users');
+const { datas_hbs, listCorrect } = require('../helpers/variables');
 
-
-let datas_hbs = {
-    title: 'Portafolio',
-    nombre: 'Pablo Rueda'
-};
 
 // Process
 
@@ -22,10 +19,8 @@ const aboutGet = async( req = request , res = response ) => {
 };
 
 // CONTACT Page
-const contactGet = async( req, res ) => {
-    res.render( 'html-links/contact', {
-        correct: 'todo correcto'
-    } );
+const contactGet = ( req, res ) => {
+    res.render( 'html-links/contact', datas_hbs );
 };
 
 const contactPost = async(req = request,res = response) => {
@@ -40,6 +35,7 @@ const contactPost = async(req = request,res = response) => {
         rol,
         message
     } = req.body;
+
     
     const lista = {
         name,
@@ -48,13 +44,17 @@ const contactPost = async(req = request,res = response) => {
         telephone,
         rol,
         message
-    }
-
+    };
+    
+    const salt = bcrypt.genSaltSync();
+    lista.password = bcrypt.hashSync( password , salt);
+    
     const result = new Page_User( lista );
-
+    
     await result.save();
 
-    res.status(200);
+    res.status(200).render( 'html-links/contact', listCorrect );
+
 };
 
 module.exports = {

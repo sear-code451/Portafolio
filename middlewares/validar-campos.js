@@ -1,14 +1,15 @@
 // Requires
 const { validationResult } = require('express-validator');
 const { request, response } = require('express');
-
-
+const { bugList, findingErrorMessages } = require('../helpers/variables');
 
 // Process
-const validarCampos = ( req = request, res = response, next ) => {
-    const errors = validationResult(req);
+const validarCampos = async( req = request, res = response, next ) => {
+    let errors = validationResult(req);
     if( !errors.isEmpty() ) {
-        return res.status(400).json( errors );
+        bugList.data_error = findingErrorMessages( errors.errors );
+        
+        return res.status(400).render('html-links/contact', bugList );
     }
     next();
 };

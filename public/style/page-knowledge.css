@@ -150,20 +150,24 @@
     align-items: center;
     font-family: var(--sourceSecundary);
     background-color: #DF2E38;
-    border: 2px solid #DF2E38;
     border-radius: 5px;
     width: 408px;
-    height: 40px;
+    margin: 0 0 10px 0;
+  }
 
+  /* accepted */
+  .accepted {
+    background-color: #16FF00;
   }
 
   .exist p {
      font-size: 16px;
-     margin: 0 0 0 15px;
+     margin: 7px 8px 7px 1px;
   }
 
   .exist .size {
     font-size: 21px;
+    padding: 2px 13px 2px 14px;
   }
 
   .title-text {
