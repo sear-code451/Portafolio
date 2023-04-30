@@ -4,6 +4,7 @@ const { response, request } = require('express');
 const bcrypt = require('bcryptjs');
 const Page_User = require('../models/schema-users');
 const { datas_hbs, listCorrect } = require('../helpers/variables');
+const { generarJWT } = require('../helpers/generar-jwt');
 
 
 // Process
@@ -45,13 +46,22 @@ const contactPost = async(req = request,res = response) => {
         rol,
         message
     };
-    
+    // Encript password
     const salt = bcrypt.genSaltSync();
     lista.password = bcrypt.hashSync( password , salt);
-    
+
+    // Generate JWT OR TOKEN
+    const token = await generarJWT( name, telephone, message );
+    console.log(token);
+
+    // Generate new Document inside User Schema
     const result = new Page_User( lista );
     
+    // Save into the DB
     await result.save();
+
+    // ListCorrect : adding the token
+    listCorrect.token = token;
 
     res.status(200).render( 'html-links/contact', listCorrect );
 

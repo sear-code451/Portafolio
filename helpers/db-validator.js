@@ -1,6 +1,7 @@
 
 // Requires
 const Role = require('../models/roles');
+const Page_User = require('../models/schema-users');
 
 // Process
 const isValidRole = async( rol = '' ) => {
@@ -10,6 +11,12 @@ const isValidRole = async( rol = '' ) => {
     }
 };
 
+const isValidEmail = async( email ) => {
+    const emailValid = await Page_User.findOne( { email } );
+    if( !emailValid ) throw new Error ( `This ${email} does not exist in the DB` );
+};
+
 module.exports = {
-    isValidRole
+    isValidRole,
+    isValidEmail
 }

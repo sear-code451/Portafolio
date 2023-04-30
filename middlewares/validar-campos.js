@@ -14,6 +14,10 @@ const validarCampos = async( req = request, res = response, next ) => {
     next();
 };
 
+const validarCamposLogin = async( req = request, res = response, next ) => {
+    
+};
+
 module.exports = {
     validarCampos
 };

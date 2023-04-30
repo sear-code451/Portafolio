@@ -15,6 +15,7 @@ class Server {
         this.path_DB = process.env.MONGO_CONN ;
         this.path_partials = process.env.PATH_PARTIALS;
         this.path_home = '/';
+        this.authPath = '/login' ;
         
         this.app.set( 'view engine', 'hbs' );
         hbs.registerPartials( this.path_partials);
@@ -43,7 +44,10 @@ class Server {
     }
 
     routes() {
+        this.app.use( this.authPath, require('../router/login') );
+
         this.app.use( this.path_home, require('../router/home') );
+
     }
 
     async connectionDB() {

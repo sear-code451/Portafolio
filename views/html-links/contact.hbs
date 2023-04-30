@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../style/footer.css">
     <link rel="stylesheet" href="../style/page-knowledge.css">
     
+    <script defer src="../js/contact-buttom/get-token.js"></script>
     <script defer src="../js/script.js"></script>
     <script defer src="../js/example.js"></script>
     <script defer src="../js/page-contact.js"></script>
@@ -120,13 +121,25 @@
                     </p>
 
                     {{> error_message}}
+                    
+                    <div class="access-login" id="content-login-token">
+                            <button type="button" class="access-option" id="button-token" onclick="copyContent()" >
+                                Token
+                            </button>
+
+                            {{> sending_token}}
+
+                            <a href="/login" class="access-option" id="link-login">
+                                Login
+                            </a>
+                    </div>
 
                   
                     <button  name="enviar_formulario" id="enviar"><p>Enviar</p></button>
       
                     <p class="aviso">
                       <span class="obligatorio"> * </span>Los campos son obligatorios.
-                    </p>          
+                    </p>
                 
               </form>
         </div>  
